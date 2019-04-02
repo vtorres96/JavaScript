@@ -1,0 +1,24 @@
+.box {
+    background-color: red;
+    color: white;
+    padding: 40px;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.mensagem-erro {
+    display: none;
+    color: red;
+    font-size: 14px;
+}
+
+.aparece {
+    display: block;
+}

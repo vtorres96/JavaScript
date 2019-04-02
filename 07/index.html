@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // consultando API externa
+        // let xmlhttp = new XMLHttpRequest()
+        // xmlhttp.onreadystatechange = function() {
+        //   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        //     document.write(xmlhttp.responseText);
+        //   }
+        // };
+        //
+        // xmlhttp.open('get','https://jsonplaceholder.typicode.com/todos/1', true)
+        // xmlhttp.send()
+
+      // Lendo um arquivo através de requisição AJAX
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML =
+            this.responseText;
+          }
+        };
+        xhttp.open("GET", "ajax.php", true);
+        xhttp.send();
+      }
+    </script>
+
+    <div id="demo">
+      <button type="button" onclick="loadDoc()">Exibir Conteúdo</button>
+    </div>
+
+  </body>
+</html>
